@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "community_ways",
+  "info": {
+    "singularName": "community-way",
+    "pluralName": "community-ways",
+    "displayName": "CommunityWay",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Number": {
+      "type": "string"
+    }
+  }
+}

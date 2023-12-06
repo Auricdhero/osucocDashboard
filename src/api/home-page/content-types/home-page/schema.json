@@ -1,0 +1,81 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "WelcomeImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "WelcomeDescription": {
+      "type": "text"
+    },
+    "IntroSection": {
+      "type": "string"
+    },
+    "BibleVrs": {
+      "type": "text"
+    },
+    "Quotebook": {
+      "type": "string"
+    },
+    "TitleQuestion": {
+      "type": "string"
+    },
+    "IntroBody": {
+      "type": "richtext"
+    },
+    "TitleAnswer": {
+      "type": "richtext"
+    },
+    "AnswerImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Answer2Img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "GodOnly": {
+      "type": "text"
+    },
+    "aShortQuote": {
+      "type": "text"
+    },
+    "sermonApp": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "SermonAppTitle": {
+      "type": "string"
+    },
+    "appDescription": {
+      "type": "text"
+    }
+  }
+}
