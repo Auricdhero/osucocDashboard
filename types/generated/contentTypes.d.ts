@@ -911,6 +911,8 @@ export interface ApiSermonSermon extends Schema.CollectionType {
     Picture: Attribute.Media;
     Audio: Attribute.Media;
     Notes: Attribute.RichText;
+    Slides: Attribute.Media;
+    Sermonist: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
