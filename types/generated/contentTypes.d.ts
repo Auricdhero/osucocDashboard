@@ -782,41 +782,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
-export interface ApiHistoryTimeLineHistoryTimeLine
-  extends Schema.CollectionType {
-  collectionName: 'history_time_lines';
-  info: {
-    singularName: 'history-time-line';
-    pluralName: 'history-time-lines';
-    displayName: 'HistoryTimeLine';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    YrImg: Attribute.Media;
-    ShortTitle: Attribute.String;
-    ShortDescription: Attribute.String;
-    Year: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::history-time-line.history-time-line',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::history-time-line.history-time-line',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiHomePageHomePage extends Schema.SingleType {
   collectionName: 'home_pages';
   info: {
@@ -913,6 +878,7 @@ export interface ApiSermonSermon extends Schema.CollectionType {
     Notes: Attribute.RichText;
     Slides: Attribute.Media;
     Sermonist: Attribute.String;
+    slug: Attribute.UID<'api::sermon.sermon', 'Title'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -981,7 +947,6 @@ declare module '@strapi/types' {
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::community-way.community-way': ApiCommunityWayCommunityWay;
       'api::event.event': ApiEventEvent;
-      'api::history-time-line.history-time-line': ApiHistoryTimeLineHistoryTimeLine;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::ministry.ministry': ApiMinistryMinistry;
       'api::sermon.sermon': ApiSermonSermon;
