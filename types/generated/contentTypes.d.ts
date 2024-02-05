@@ -790,19 +790,16 @@ export interface ApiEventEvent extends Schema.CollectionType {
   info: {
     singularName: 'event';
     pluralName: 'events';
-    displayName: 'Event';
+    displayName: 'music';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Name: Attribute.String;
-    Flyer: Attribute.Media;
-    Date: Attribute.DateTime;
-    Location: Attribute.String;
-    OnlineUrl: Attribute.UID;
-    EventDescription: Attribute.Blocks;
+    Music: Attribute.Media;
+    Title: Attribute.String;
+    AboutSong: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
