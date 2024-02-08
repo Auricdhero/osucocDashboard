@@ -13,17 +13,25 @@
   "pluginOptions": {},
   "attributes": {
     "Music": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Title": {
       "type": "string"
     },
     "AboutSong": {
       "type": "richtext"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

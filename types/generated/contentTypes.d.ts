@@ -800,6 +800,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     Music: Attribute.Media;
     Title: Attribute.String;
     AboutSong: Attribute.RichText;
+    Image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
