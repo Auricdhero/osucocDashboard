@@ -728,12 +728,12 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    Purpose: Attribute.String;
-    purposeDescription: Attribute.Text;
-    StrategyTitle: Attribute.String;
-    StrategyDescription: Attribute.Text;
-    VisionTitle: Attribute.String;
-    visionDescription: Attribute.Text;
+    history: Attribute.Text;
+    historyImg: Attribute.Media;
+    values: Attribute.Text;
+    vision: Attribute.Text;
+    visionPic: Attribute.Media;
+    valuesPic: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -12,23 +12,35 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Purpose": {
-      "type": "string"
-    },
-    "purposeDescription": {
+    "history": {
       "type": "text"
     },
-    "StrategyTitle": {
-      "type": "string"
+    "historyImg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     },
-    "StrategyDescription": {
+    "values": {
       "type": "text"
     },
-    "VisionTitle": {
-      "type": "string"
-    },
-    "visionDescription": {
+    "vision": {
       "type": "text"
+    },
+    "visionPic": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "valuesPic": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
