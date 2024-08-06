@@ -21,12 +21,6 @@
         "videos"
       ]
     },
-    "WelcomeDescription": {
-      "type": "text"
-    },
-    "IntroSection": {
-      "type": "string"
-    },
     "BibleVrs": {
       "type": "text"
     },
@@ -65,11 +59,12 @@
       "type": "text"
     },
     "sermonApp": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "SermonAppTitle": {
       "type": "string"

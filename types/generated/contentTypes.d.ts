@@ -832,8 +832,6 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
   };
   attributes: {
     WelcomeImg: Attribute.Media;
-    WelcomeDescription: Attribute.Text;
-    IntroSection: Attribute.String;
     BibleVrs: Attribute.Text;
     Quotebook: Attribute.String;
     TitleQuestion: Attribute.String;
