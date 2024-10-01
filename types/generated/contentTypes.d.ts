@@ -752,32 +752,30 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
   };
 }
 
-export interface ApiCommunityWayCommunityWay extends Schema.CollectionType {
-  collectionName: 'community_ways';
+export interface ApiAlbumAlbum extends Schema.CollectionType {
+  collectionName: 'albums';
   info: {
-    singularName: 'community-way';
-    pluralName: 'community-ways';
-    displayName: 'CommunityWay';
-    description: '';
+    singularName: 'album';
+    pluralName: 'albums';
+    displayName: 'Album';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
-    Description: Attribute.Text;
-    Number: Attribute.String;
+    title: Attribute.String;
+    albumLabel: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::community-way.community-way',
+      'api::album.album',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::community-way.community-way',
+      'api::album.album',
       'oneToOne',
       'admin::user'
     > &
@@ -801,6 +799,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
     Title: Attribute.String;
     AboutSong: Attribute.RichText;
     Image: Attribute.Media;
+    album: Attribute.Relation<
+      'api::event.event',
+      'oneToOne',
+      'api::album.album'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -855,39 +858,6 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::home-page.home-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiMinistryMinistry extends Schema.CollectionType {
-  collectionName: 'ministries';
-  info: {
-    singularName: 'ministry';
-    pluralName: 'ministries';
-    displayName: 'Ministry';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Name: Attribute.String;
-    Picture: Attribute.Media;
-    Description: Attribute.Text;
-    Functions: Attribute.Blocks;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::ministry.ministry',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::ministry.ministry',
       'oneToOne',
       'admin::user'
     > &
@@ -981,10 +951,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::slugify.slug': PluginSlugifySlug;
       'api::about-page.about-page': ApiAboutPageAboutPage;
-      'api::community-way.community-way': ApiCommunityWayCommunityWay;
+      'api::album.album': ApiAlbumAlbum;
       'api::event.event': ApiEventEvent;
       'api::home-page.home-page': ApiHomePageHomePage;
-      'api::ministry.ministry': ApiMinistryMinistry;
       'api::sermon.sermon': ApiSermonSermon;
       'api::value.value': ApiValueValue;
     }
