@@ -4,6 +4,7 @@
  * sermon controller
  */
 
+// @ts-ignore
 const { createCoreController } = require('@strapi/strapi').factories;
 
 // @ts-ignore
